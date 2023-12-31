@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+  {% block sub_content %}
+    <div class="jumbotron">
+      <h1>Hello Hello</h1>
+
+
+      <form method="post">
+        <input type="password" name="password">
+        <input type="submit">
+      </form>
+
+      <ul>
+        {% for fruit in fruits %}
+        <li>{{fruit}}</li>
+        {% endfor %}
+      </ul>
+
+      {% if 'banana' in fruits %}
+        <p>banana is in the list</p>
+      {% else %}
+        <p>banana is not in the list</p>
+      {% endif %}
+      <!-- {{fruits}} -->
+      <p>______________________________________________</p>
+      <ul>
+        <li>apple</li>
+        <li>banana</li>
+        <li>pineaple</li>
+      </ul>
+      <img src={{url_for('static', filename="static.avif")}} alt="" height="250" width="250">
+    </div>
+  {% endblock %}

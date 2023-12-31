@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+  {% block sub_content %}
+
+    <h1>This is the about page</h1>
+
+    <form method="POST">
+      password: <input type="password" name="name">
+      Age: <input type="text" name="age">
+      <input type="submit">
+    </form>
+    <h1> {{session['username']}} </h1>
+
+  {% endblock %}
